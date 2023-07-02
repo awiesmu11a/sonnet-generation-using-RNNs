@@ -1,0 +1,79 @@
+preprocessing:
+tokenizing the data - poem, stanza, line -done
+bigrams - yet to do
+hyphenated words- code to do (fairly easy)
+punctuation-done
+keep syllables in mind
+======================
+baseline:
+Batch size for SGD
+number of epochs-done
+temperature
+change number of LSTM units-done
+check if I can do more preprocessing on basic level - only new line was required, done
+number of chars in a sequence
+------------
+Analyse above variations for type of sentence produced in terms of meaning and/or words used
+sentence structure 
+sonnet structure
+rhyme scheme
+runtime/amount of training data needed
+Use the best model to generate poem from given first line for different temperature and comment
+======================
+vocablury building:
+punctutations carry meaning
+can save don't as do and n't
+how to preserve the sonnets' properties
+bigrams
+hyphenated words
+also how to evaluate the model?
+remember line breaks
+also quatrains and couplets
+============================
+
+baseline 100 epoch non-batch (128 units):
+
+shall i compare thee to a summer's day? on sweet.
+that in my near shall i love thee gott make to me,
+and that i not love be for thy fair have shail,
+whilst my soul thou lov's to remembre to me seen love all this pursuie dif thee all thy ble,
+one is my heart the blest thou thy self goow?
+it not less to be so,
+and that best come that i have love's power,
+and sweets or my havisy sweet forged,
+that in my heart to give thee my love still deep this gain,
+and they thy death do sovere to thee?
+what i note not fair still by thy dear moung and hate,
+----------------------------------------
+can code the syllables
+meaningless word present-sentence have some meaning (not collectively)
+rhyme scheme not learnt
+no structure (syllables and quatrains wise)
+7 secs per epoch
+
+200 units - no noticable change in terms of quality; tried to match a little in terms of rhyme scheme
+
+500 epochs - no sufficient improvement
+1000 epochs - no difference in loss
+
+
+
+
+================================
+part 1:
+NLTK
+hyphn
+syllable count (see if can incorporate depend on time)
+part 3:
+use only word tokenize with variation in sequence length
+used space as a word
+ignore space
+attention (not implement just mention)
+and same goes for NLTK
+including val set (shuffle poems)
+
+one loop to genrate x number of poems
+for part 2: one loop for all temperature
+also batch implementation
+analysis - perplexity
+sonnet structure and rhyme etc. from surface reading comment
